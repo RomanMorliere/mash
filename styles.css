@@ -448,42 +448,6 @@ h2 {
   gap: 0.4rem;
 }
 
-.attendance-toggle {
-  display: inline-flex;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid rgba(20, 25, 31, 0.18);
-}
-
-.attendance-toggle button {
-  border: 0;
-  padding: 0.52rem 0.88rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  cursor: pointer;
-}
-
-.attendance-toggle button.active {
-  background: linear-gradient(90deg, #ffe36f, #f2c341);
-  color: var(--text-dark);
-  font-weight: 700;
-}
-
-.rsvp-button {
-  display: inline-block;
-  padding: 0.78rem 1.3rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #dff0ff, #bcdfff);
-  color: var(--text-dark);
-  border: 1px solid rgba(110, 174, 222, 0.65);
-  box-shadow: 0 0 12px rgba(145, 191, 232, 0.34);
-  font-weight: 700;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(16px);

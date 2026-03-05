@@ -7,17 +7,6 @@ if (navToggle && navMenu) {
   });
 }
 
-const attendToggles = document.querySelectorAll(".attendance-toggle");
-attendToggles.forEach((toggle) => {
-  const buttons = toggle.querySelectorAll("button");
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      buttons.forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
-});
-
 const revealItems = document.querySelectorAll(".reveal");
 if (revealItems.length > 0 && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
