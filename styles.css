@@ -1,17 +1,17 @@
 :root {
-  --bg: #0a0b0d;
-  --bg-soft: #13161a;
-  --surface: #f3f1eb;
-  --text: #f5f4f0;
-  --text-dark: #17181a;
-  --muted: #b8b8b2;
-  --muted-dark: #4c5259;
-  --accent: #9dc9f3;
-  --accent-strong: #74b6ee;
-  --line: rgba(255, 255, 255, 0.12);
-  --line-soft: rgba(20, 25, 31, 0.12);
-  --glass: rgba(148, 194, 238, 0.12);
-  --shadow: 0 14px 40px rgba(0, 0, 0, 0.24);
+  --bg: #f6f2ea;
+  --bg-soft: #ede7dc;
+  --surface: #ffffff;
+  --text: #17191d;
+  --text-dark: #17191d;
+  --muted: #5a616b;
+  --muted-dark: #3f4650;
+  --accent: #91bfe8;
+  --accent-strong: #6eaede;
+  --line: rgba(20, 25, 31, 0.14);
+  --line-soft: rgba(20, 25, 31, 0.1);
+  --glass: rgba(145, 191, 232, 0.2);
+  --shadow: 0 14px 34px rgba(38, 50, 65, 0.14);
 }
 
 * {
@@ -23,9 +23,9 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 14%, rgba(149, 196, 240, 0.18), transparent 30%),
-    radial-gradient(circle at 84% 8%, rgba(126, 181, 229, 0.15), transparent 28%),
-    linear-gradient(180deg, #0f1114 0%, #090a0c 72%);
+    radial-gradient(circle at 12% 14%, rgba(145, 191, 232, 0.2), transparent 30%),
+    radial-gradient(circle at 84% 8%, rgba(110, 174, 222, 0.16), transparent 28%),
+    linear-gradient(180deg, #fcfaf6 0%, #f4eee4 72%);
   line-height: 1.6;
 }
 
@@ -49,7 +49,7 @@ a {
   padding: 1rem 5vw;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  background: rgba(8, 10, 13, 0.78);
+  background: rgba(250, 247, 241, 0.84);
 }
 
 .logo {
@@ -60,7 +60,7 @@ a {
 .logo img {
   width: 100%;
   height: auto;
-  filter: brightness(1.08) contrast(1.04);
+  filter: contrast(1.06);
 }
 
 .nav {
@@ -71,7 +71,7 @@ a {
 }
 
 .nav a {
-  opacity: 0.86;
+  opacity: 0.8;
   transition: opacity 0.2s ease;
 }
 
@@ -80,8 +80,8 @@ a {
 }
 
 .nav-cta {
-  background: rgba(157, 201, 243, 0.17);
-  color: var(--text);
+  background: rgba(145, 191, 232, 0.22);
+  color: var(--text-dark);
   padding: 0.46rem 0.82rem;
   border-radius: 999px;
   border: 1px solid rgba(157, 201, 243, 0.45);
@@ -158,22 +158,22 @@ h2 {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #edf4fb, #d8ecff);
+  background: linear-gradient(90deg, #ffffff, #eaf4fe);
   color: var(--text-dark);
   border: 1px solid var(--line-soft);
   font-weight: 700;
 }
 
 .btn-ghost {
-  background: rgba(157, 201, 243, 0.1);
-  border-color: rgba(157, 201, 243, 0.35);
+  background: rgba(145, 191, 232, 0.14);
+  border-color: rgba(145, 191, 232, 0.44);
 }
 
 .btn-small {
   padding: 0.45rem 0.85rem;
   font-size: 0.88rem;
-  background: rgba(157, 201, 243, 0.08);
-  border-color: rgba(157, 201, 243, 0.36);
+  background: rgba(145, 191, 232, 0.14);
+  border-color: rgba(145, 191, 232, 0.42);
 }
 
 .panel {
@@ -196,8 +196,8 @@ h2 {
 .mini-card,
 .value-grid article,
 .dj-card {
-  background: linear-gradient(155deg, rgba(149, 194, 239, 0.15), rgba(17, 20, 24, 0.85));
-  border: 1px solid rgba(157, 201, 243, 0.3);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.95), rgba(241, 247, 253, 0.92));
+  border: 1px solid rgba(145, 191, 232, 0.34);
   border-radius: 14px;
   padding: 1rem;
   box-shadow: var(--shadow);
@@ -227,8 +227,8 @@ h2 {
 .event-card {
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(157, 201, 243, 0.34);
-  background: linear-gradient(160deg, rgba(17, 21, 25, 0.92), rgba(13, 16, 20, 0.95));
+  border: 1px solid rgba(145, 191, 232, 0.34);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(245, 250, 255, 0.92));
   box-shadow: var(--shadow);
 }
 
@@ -249,7 +249,7 @@ h2 {
 
 .media-stack iframe {
   border-radius: 12px;
-  border: 1px solid rgba(157, 201, 243, 0.28);
+  border: 1px solid rgba(145, 191, 232, 0.36);
   background: var(--glass);
 }
 
@@ -265,8 +265,8 @@ h2 {
 }
 
 .contact-grid a {
-  background: rgba(243, 241, 235, 0.08);
-  border: 1px solid rgba(243, 241, 235, 0.22);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(20, 25, 31, 0.16);
   border-radius: 999px;
   padding: 0.42rem 0.88rem;
 }
@@ -331,13 +331,13 @@ h2 {
     display: inline-block;
   }
 
-  .nav {
+.nav {
     position: fixed;
     top: 64px;
     right: 0;
     width: 80vw;
     height: calc(100vh - 64px);
-    background: rgba(10, 12, 15, 0.98);
+    background: rgba(250, 247, 241, 0.98);
     border-left: 1px solid var(--line);
     flex-direction: column;
     align-items: flex-start;
