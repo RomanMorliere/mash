@@ -348,6 +348,164 @@ h2 {
   border: 1px solid rgba(157, 201, 243, 0.34);
 }
 
+.event-detail-page {
+  color: #efedf8;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(247, 203, 92, 0.15), transparent 35%),
+    radial-gradient(circle at 82% 10%, rgba(124, 104, 238, 0.22), transparent 38%),
+    linear-gradient(180deg, #09090c 0%, #101017 100%);
+}
+
+.event-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5vw;
+  background: linear-gradient(90deg, rgba(246, 187, 74, 0.32), rgba(249, 147, 72, 0.24), rgba(118, 90, 215, 0.3));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.event-topbar a {
+  color: #ffffff;
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
+
+.event-topbar .logo {
+  width: 106px;
+  min-width: 106px;
+}
+
+.event-detail-layout {
+  width: min(1280px, 92vw);
+  margin: 6.6rem auto 5rem;
+  display: grid;
+  grid-template-columns: minmax(380px, 52%) minmax(300px, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.event-flyer-wrap {
+  position: sticky;
+  top: 6.3rem;
+}
+
+.event-flyer {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.42);
+}
+
+.event-content {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.event-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+  max-width: 14ch;
+}
+
+.event-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.detail-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(20, 20, 30, 0.72);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.detail-label {
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(250, 220, 120, 0.94);
+}
+
+.detail-value {
+  margin: 0;
+  color: rgba(243, 243, 252, 0.9);
+}
+
+.stack-list {
+  list-style: none;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.attendance-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 219, 85, 0.65);
+}
+
+.attendance-toggle button {
+  border: 0;
+  padding: 0.52rem 0.88rem;
+  background: #16161f;
+  color: #f6f7fb;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.attendance-toggle button.active {
+  background: linear-gradient(90deg, #ffe36f, #f2c341);
+  color: #101117;
+  font-weight: 700;
+}
+
+.rsvp-button {
+  display: inline-block;
+  padding: 0.78rem 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #9f89ff, #7454f6);
+  color: #fff;
+  border: 1px solid rgba(190, 170, 255, 0.72);
+  box-shadow: 0 0 18px rgba(138, 104, 255, 0.45);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 225, 135, 0.85);
+  background: rgba(158, 126, 255, 0.18);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 120;
+  transition: transform 0.08s linear;
+}
+
 @media (max-width: 900px) {
   .two-col,
   .event-grid,
@@ -397,5 +555,19 @@ h2 {
   .dj-grid,
   .gallery {
     grid-template-columns: 1fr;
+  }
+
+  .event-topbar {
+    padding: 0.7rem 4vw;
+  }
+
+  .event-detail-layout {
+    margin-top: 5.4rem;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .event-flyer-wrap {
+    position: static;
   }
 }

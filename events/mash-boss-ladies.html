@@ -8,24 +8,57 @@
   <link rel="shortcut icon" href="../assets/mash_logo.svg">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-  <main class="event-page">
-    <a href="../index.html#events" class="btn btn-small">Back to Events</a>
-    <h1>MASH Boss Ladies</h1>
-    <p>Date &amp; Time: March 19th, 2026, 22:00 - 2:00.</p>
-    <p>Venue: 160K, Schiekade 201, Rotterdam.</p>
+<body class="event-detail-page">
+  <header class="event-topbar">
+    <a href="../index.html" class="logo" aria-label="MASH Home">
+      <img src="../assets/mash_logo.svg" alt="MASH logo">
+    </a>
+    <a href="../all-events.html">All Events</a>
+  </header>
 
-    <section class="gallery">
-      <img src="../assets/MASH BOSS LADIES20.JPG" alt="MASH Boss Ladies flyer">
+  <main class="event-detail-layout">
+    <section class="event-flyer-wrap reveal">
+      <img class="event-flyer" src="../assets/MASH BOSS LADIES20.JPG" alt="MASH Boss Ladies flyer">
     </section>
 
-    <h2>Sounds By</h2>
-    <ul>
-      <li>Zena-Rae</li>
-      <li>Emssoleil</li>
-      <li>Kirakira</li>
-      <li>Defne</li>
-    </ul>
+    <section class="event-content">
+      <p class="eyebrow reveal">MASH Event Detail</p>
+      <h1 class="event-title reveal">MASH Boss Ladies</h1>
+      <p class="event-subtitle reveal">A dedicated lineup celebrating femme-forward energy in Rotterdam nightlife.</p>
+
+      <article class="detail-card reveal">
+        <p class="detail-label">Date &amp; Time</p>
+        <p class="detail-value">March 19th, 2026, 22:00 - 02:00</p>
+      </article>
+
+      <article class="detail-card reveal">
+        <p class="detail-label">Venue</p>
+        <p class="detail-value">160K, Schiekade 201, Rotterdam</p>
+      </article>
+
+      <article class="detail-card reveal">
+        <p class="detail-label">Sounds By</p>
+        <ul class="stack-list">
+          <li>Zena-Rae</li>
+          <li>Emssoleil</li>
+          <li>Kirakira</li>
+          <li>Defne</li>
+        </ul>
+      </article>
+
+      <article class="detail-card reveal">
+        <p class="detail-label">Newsletter / Attendance</p>
+        <div class="attendance-toggle">
+          <button type="button" class="active">Newsletter</button>
+          <button type="button">Attendance</button>
+        </div>
+      </article>
+
+      <div class="reveal">
+        <a class="rsvp-button" href="mailto:hello@mashcollective.com?subject=RSVP%20MASH%20Boss%20Ladies">RSVP</a>
+      </div>
+    </section>
   </main>
+  <script src="../script.js"></script>
 </body>
 </html>
