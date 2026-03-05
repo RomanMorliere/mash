@@ -50,29 +50,29 @@
         </div>
         <p class="detail-label">Events with MASH</p>
         <ul class="stack-list compact-events" id="dj-events"></ul>
+      </article>
 
-        <div class="sc-widget" id="sc-widget">
-          <div class="sc-widget-head">
-            <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" class="sc-icon" aria-hidden="true">
+      <article class="dj-profile-card">
+        <div class="main" id="sc-widget">
+          <div class="currentplaying">
+            <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" class="soundcloud" aria-hidden="true">
               <path d="M537.6 226.6c-10.8 0-21.1 2.2-30.6 6.1-6.4-70.8-65.8-126.4-138.3-126.4-17.8 0-35 3.3-50.3 9.4-6.1 2.2-7.8 4.4-7.8 9.2v249.7c0 5 3.9 8.6 8.6 9.2h218.3c43.3 0 78.6-35 78.6-78.3.1-43.6-35.2-78.9-78.5-78.9z"></path>
             </svg>
             <p class="heading">Currently Playing</p>
-            <div class="loading" aria-hidden="true">
-              <div class="load"></div>
-              <div class="load"></div>
-              <div class="load"></div>
-            </div>
           </div>
+
           <iframe
             id="dj-soundcloud-player"
             title="SoundCloud player"
             width="100%"
-            height="150"
+            height="160"
             scrolling="no"
             frameborder="no"
             allow="autoplay"
           ></iframe>
           <p id="dj-soundcloud-player-fallback" class="sc-fallback" hidden>SoundCloud comming soon</p>
+
+          <div id="dj-song-list"></div>
         </div>
       </article>
     </section>

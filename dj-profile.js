@@ -62,6 +62,7 @@ const profileImageEl = document.getElementById("dj-profile-image");
 const soundcloudEl = document.getElementById("dj-soundcloud");
 const soundcloudPlayerEl = document.getElementById("dj-soundcloud-player");
 const soundcloudFallbackEl = document.getElementById("dj-soundcloud-player-fallback");
+const songListEl = document.getElementById("dj-song-list");
 const eventsEl = document.getElementById("dj-events");
 const galleryEl = document.getElementById("dj-set-gallery");
 
@@ -87,9 +88,73 @@ if (soundcloudEl) {
   }
 }
 
-if (soundcloudPlayerEl && soundcloudFallbackEl) {
+function createSongRow(name, artist, href) {
+  const row = document.createElement("div");
+  row.className = "loader";
+  if (href) {
+    row.addEventListener("click", () => window.open(href, "_blank", "noopener"));
+  }
+
+  const songWrap = document.createElement("div");
+  songWrap.className = "song";
+
+  const nameEl = document.createElement("p");
+  nameEl.className = "name";
+  nameEl.textContent = name;
+
+  const artistEl = document.createElement("p");
+  artistEl.className = "artist";
+  artistEl.textContent = artist;
+
+  const album = document.createElement("div");
+  album.className = "albumcover";
+
+  const play = document.createElement("div");
+  play.className = "play";
+
+  songWrap.append(nameEl, artistEl);
+  row.append(songWrap, album, play);
+  return row;
+}
+
+function fillSongList() {
+  if (!songListEl) return;
+  songListEl.innerHTML = "";
+
+  if (!dj.soundcloud) {
+    songListEl.appendChild(createSongRow("SoundCloud comming soon", dj.name, ""));
+    return;
+  }
+
+  songListEl.appendChild(createSongRow("Open Artist Profile", dj.name, dj.soundcloud));
+  songListEl.appendChild(createSongRow("Latest Uploads", dj.name, dj.soundcloud));
+  songListEl.appendChild(createSongRow("More Tracks", dj.name, dj.soundcloud));
+}
+
+async function resolveSoundCloudEmbedUrl(url) {
+  try {
+    const endpoint = `https://soundcloud.com/oembed?format=json&url=${encodeURIComponent(url)}`;
+    const response = await fetch(endpoint);
+    if (!response.ok) throw new Error("oEmbed failed");
+    const data = await response.json();
+    const match = String(data.html || "").match(/src=\"([^\"]+)\"/i);
+    if (match && match[1]) {
+      return match[1].replace(/&amp;/g, "&");
+    }
+  } catch (error) {
+    return "";
+  }
+  return "";
+}
+
+async function setupSoundCloudPlayer() {
+  if (!soundcloudPlayerEl || !soundcloudFallbackEl) return;
+
   if (dj.soundcloud) {
-    const widgetSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(dj.soundcloud)}&color=%236eaede&auto_play=false&show_user=true`;
+    const resolvedSrc = await resolveSoundCloudEmbedUrl(dj.soundcloud);
+    const widgetSrc =
+      resolvedSrc ||
+      `https://w.soundcloud.com/player/?url=${encodeURIComponent(dj.soundcloud)}&color=%236eaede&auto_play=false&show_user=true`;
     soundcloudPlayerEl.src = widgetSrc;
     soundcloudPlayerEl.hidden = false;
     soundcloudFallbackEl.hidden = true;
@@ -98,6 +163,9 @@ if (soundcloudPlayerEl && soundcloudFallbackEl) {
     soundcloudFallbackEl.hidden = false;
   }
 }
+
+fillSongList();
+setupSoundCloudPlayer();
 
 if (eventsEl) {
   eventsEl.innerHTML = "";

@@ -407,9 +407,8 @@ h2 {
 
 .dj-profile-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 760px);
+  grid-template-columns: minmax(280px, 360px) 1fr;
   gap: 1rem;
-  justify-content: center;
 }
 
 .dj-profile-card {
@@ -448,45 +447,64 @@ h2 {
   font-size: 0.85rem;
 }
 
-.sc-widget {
+.main {
+  background-color: #fff;
+  padding: 1em;
+  padding-bottom: 1.1em;
+  border-radius: 15px;
   border: 1px solid rgba(145, 191, 232, 0.34);
-  border-radius: 12px;
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.72);
 }
 
-.sc-widget-head {
+.loader {
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 0.7rem;
+  flex-direction: row;
+  min-height: 4em;
+  padding: 0.3em 1em;
+  transform: rotate(180deg);
+  justify-content: right;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+  margin-top: 0.5rem;
 }
 
-.sc-icon {
-  width: 20px;
-  height: 20px;
+.loader:hover {
+  cursor: pointer;
+  background-color: #ebf3fc;
+}
+
+.currentplaying {
+  display: flex;
+  margin: 0.2em 0 0.8em;
+}
+
+.soundcloud {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.6em;
   fill: #ff8800;
 }
 
-.sc-widget-head .heading {
+.heading {
+  color: #111;
+  font-size: 1em;
+  font-weight: 700;
+  align-self: center;
   margin: 0;
-  font-size: 0.95rem;
-  color: var(--text-dark);
 }
 
 .loading {
-  display: inline-flex;
-  align-items: flex-end;
+  display: flex;
   margin-left: auto;
+  margin-top: 0.25em;
   gap: 0.15rem;
 }
 
 .load {
   width: 2px;
-  height: 16px;
+  height: 22px;
   background-color: #ff8800;
-  border-radius: 4px;
   animation: 1s move6 infinite;
+  border-radius: 5px;
 }
 
 .load:nth-child(1) {
@@ -501,8 +519,48 @@ h2 {
   animation-delay: 0.6s;
 }
 
+.play {
+  position: relative;
+  left: 0.35em;
+  height: 1.6em;
+  width: 1.6em;
+  clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+  background-color: #111;
+  transform: rotate(-90deg);
+  align-self: center;
+  margin-top: 0.7em;
+}
+
+.albumcover {
+  position: relative;
+  margin-right: 1em;
+  height: 40px;
+  width: 40px;
+  background-color: #e8eef5;
+  align-self: center;
+  border-radius: 5px;
+}
+
+.song {
+  position: relative;
+  transform: rotate(180deg);
+  margin-right: 1em;
+  color: #111;
+  align-self: center;
+}
+
+.song .name,
+.song .artist {
+  margin: 0;
+}
+
+.artist {
+  font-size: 0.72em;
+  color: var(--muted-dark);
+}
+
 .sc-fallback {
-  margin: 0.2rem 0 0;
+  margin: 0.6rem 0 0;
   color: var(--muted-dark);
   font-size: 0.9rem;
 }
