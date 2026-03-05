@@ -242,6 +242,44 @@ h2 {
   padding: 1rem;
 }
 
+.soon-card,
+.list-card {
+  border-radius: 14px;
+  border: 1px solid rgba(145, 191, 232, 0.34);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(245, 250, 255, 0.92));
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+}
+
+.soon-card h3,
+.list-card h3 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.all-events-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.all-events-cta {
+  margin-top: 1.2rem;
+}
+
+.event-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-dark);
+  background: rgba(145, 191, 232, 0.2);
+  border: 1px solid rgba(145, 191, 232, 0.45);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin: 0;
+}
+
 .media-stack {
   display: grid;
   gap: 1rem;
@@ -313,6 +351,7 @@ h2 {
 @media (max-width: 900px) {
   .two-col,
   .event-grid,
+  .all-events-list,
   .value-grid,
   .card-grid,
   .dj-grid,
@@ -352,6 +391,7 @@ h2 {
 
   .two-col,
   .event-grid,
+  .all-events-list,
   .value-grid,
   .card-grid,
   .dj-grid,
