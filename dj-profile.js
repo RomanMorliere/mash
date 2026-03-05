@@ -1,4 +1,3 @@
-const TEST_SOUNDCLOUD_URL = "https://soundcloud.com/viggo-bryden?ref=clipboard&p=i&c=1&si=760B21F6A0A94696BBE6B240527E0184&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing";
 const DEFAULT_PROFILE_IMAGE = "assets/viggo_test_file.jpeg";
 const GIRLS_SS_URL = "https://on.soundcloud.com/m6VB7oHf8fV4pe88yP";
 
@@ -32,15 +31,9 @@ const SOUNDCLOUD_LINKS = {
 };
 
 const GIRLS_SS_DJS = new Set([
-  "zena-rae",
-  "defne",
-  "emssoleil",
-  "kirakira",
-  "nalee",
-  "lolo",
-  "dayz",
   "jaya-latina",
-  "isthisanna"
+  "mm9",
+  "merrie"
 ]);
 
 const DJ_DATA = {
@@ -60,7 +53,7 @@ const DJ_DATA = {
 };
 
 Object.entries(DJ_DATA).forEach(([slug, dj]) => {
-  dj.soundcloud = SOUNDCLOUD_LINKS[slug] || TEST_SOUNDCLOUD_URL;
+  dj.soundcloud = SOUNDCLOUD_LINKS[slug] || "";
   dj.extraSoundcloud = GIRLS_SS_DJS.has(slug) ? GIRLS_SS_URL : "";
   dj.profileImage = PROFILE_IMAGES[slug] || DEFAULT_PROFILE_IMAGE;
   dj.setImages = SET_IMAGES[slug] || [];
@@ -85,7 +78,21 @@ if (profileImageEl) {
   profileImageEl.src = dj.profileImage;
   profileImageEl.alt = `${dj.name} profile picture`;
 }
-if (soundcloudEl) soundcloudEl.href = dj.soundcloud;
+if (soundcloudEl) {
+  if (dj.soundcloud) {
+    soundcloudEl.href = dj.soundcloud;
+    soundcloudEl.textContent = "Open SoundCloud";
+    soundcloudEl.removeAttribute("aria-disabled");
+    soundcloudEl.style.pointerEvents = "auto";
+    soundcloudEl.style.opacity = "1";
+  } else {
+    soundcloudEl.removeAttribute("href");
+    soundcloudEl.textContent = "SoundCloud comming soon";
+    soundcloudEl.setAttribute("aria-disabled", "true");
+    soundcloudEl.style.pointerEvents = "none";
+    soundcloudEl.style.opacity = "0.65";
+  }
+}
 if (extraSoundcloudEl) {
   if (dj.extraSoundcloud) {
     extraSoundcloudEl.href = dj.extraSoundcloud;
