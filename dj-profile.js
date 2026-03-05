@@ -60,6 +60,8 @@ const nameEl = document.getElementById("dj-name");
 const taglineEl = document.getElementById("dj-tagline");
 const profileImageEl = document.getElementById("dj-profile-image");
 const soundcloudEl = document.getElementById("dj-soundcloud");
+const soundcloudPlayerEl = document.getElementById("dj-soundcloud-player");
+const soundcloudFallbackEl = document.getElementById("dj-soundcloud-player-fallback");
 const eventsEl = document.getElementById("dj-events");
 const galleryEl = document.getElementById("dj-set-gallery");
 
@@ -82,6 +84,18 @@ if (soundcloudEl) {
     soundcloudEl.setAttribute("aria-disabled", "true");
     soundcloudEl.style.pointerEvents = "none";
     soundcloudEl.style.opacity = "0.65";
+  }
+}
+
+if (soundcloudPlayerEl && soundcloudFallbackEl) {
+  if (dj.soundcloud) {
+    const widgetSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(dj.soundcloud)}&color=%236eaede&auto_play=false&show_user=true`;
+    soundcloudPlayerEl.src = widgetSrc;
+    soundcloudPlayerEl.hidden = false;
+    soundcloudFallbackEl.hidden = true;
+  } else {
+    soundcloudPlayerEl.hidden = true;
+    soundcloudFallbackEl.hidden = false;
   }
 }
 

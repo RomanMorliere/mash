@@ -29,36 +29,6 @@ body {
   line-height: 1.6;
 }
 
-.organic-island {
-  position: fixed;
-  top: -130px;
-  right: -110px;
-  width: min(36vw, 520px);
-  height: min(36vw, 520px);
-  border-radius: 42% 58% 63% 37% / 46% 33% 67% 54%;
-  transform: rotate(-12deg);
-  background: radial-gradient(circle at 35% 35%, #cfe8ff 0%, #9ec8ee 42%, #6e9fca 100%);
-  opacity: 0.28;
-  filter: url(#octave1) brightness(1.22) contrast(1.05) blur(0.22rem);
-  pointer-events: none;
-  z-index: 0;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 700px) {
-  .organic-island {
-    width: min(62vw, 360px);
-    height: min(62vw, 360px);
-    top: -110px;
-    right: -140px;
-    opacity: 0.22;
-  }
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -437,8 +407,9 @@ h2 {
 
 .dj-profile-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) 1fr;
+  grid-template-columns: minmax(300px, 760px);
   gap: 1rem;
+  justify-content: center;
 }
 
 .dj-profile-card {
@@ -459,6 +430,88 @@ h2 {
 
 .dj-meta {
   margin-top: 0.9rem;
+}
+
+.compact-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.compact-events li {
+  list-style: none;
+  background: rgba(145, 191, 232, 0.16);
+  border: 1px solid rgba(110, 174, 222, 0.34);
+  border-radius: 999px;
+  padding: 0.24rem 0.66rem;
+  font-size: 0.85rem;
+}
+
+.sc-widget {
+  border: 1px solid rgba(145, 191, 232, 0.34);
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.sc-widget-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.7rem;
+}
+
+.sc-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ff8800;
+}
+
+.sc-widget-head .heading {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.loading {
+  display: inline-flex;
+  align-items: flex-end;
+  margin-left: auto;
+  gap: 0.15rem;
+}
+
+.load {
+  width: 2px;
+  height: 16px;
+  background-color: #ff8800;
+  border-radius: 4px;
+  animation: 1s move6 infinite;
+}
+
+.load:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.load:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.load:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.sc-fallback {
+  margin: 0.2rem 0 0;
+  color: var(--muted-dark);
+  font-size: 0.9rem;
+}
+
+@keyframes move6 {
+  0% { height: 0.2em; }
+  25% { height: 0.7em; }
+  50% { height: 1.5em; }
+  100% { height: 0.2em; }
 }
 
 .dj-sets-grid {
