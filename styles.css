@@ -72,11 +72,28 @@ a {
 
 .nav a {
   opacity: 0.8;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
   transition: opacity 0.2s ease;
 }
 
 .nav a:hover {
   opacity: 1;
+  background: rgba(145, 191, 232, 0.12);
+}
+
+.nav a.active,
+.nav .nav-current {
+  opacity: 1;
+  background: rgba(145, 191, 232, 0.22);
+  border-color: rgba(110, 174, 222, 0.62);
+  color: var(--text-dark);
+}
+
+.nav .nav-current {
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
 }
 
 .nav-cta {

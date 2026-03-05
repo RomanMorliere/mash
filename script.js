@@ -7,6 +7,53 @@ if (navToggle && navMenu) {
   });
 }
 
+const isHomePage =
+  window.location.pathname.endsWith("/index.html") ||
+  window.location.pathname.endsWith("/") ||
+  window.location.pathname === "";
+
+if (isHomePage && navMenu) {
+  const sectionLinks = Array.from(navMenu.querySelectorAll("a[href^='#']"));
+  const sections = sectionLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  const setActiveLink = (id) => {
+    sectionLinks.forEach((link) => {
+      const targetId = link.getAttribute("href").slice(1);
+      link.classList.toggle("active", targetId === id);
+    });
+  };
+
+  const updateActiveByScroll = () => {
+    const marker = window.scrollY + 180;
+    let activeId = sections.length > 0 ? sections[0].id : null;
+
+    sections.forEach((section) => {
+      if (section.offsetTop <= marker) {
+        activeId = section.id;
+      }
+    });
+
+    if (activeId) setActiveLink(activeId);
+  };
+
+  sectionLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const id = link.getAttribute("href").slice(1);
+      setActiveLink(id);
+    });
+  });
+
+  window.addEventListener("scroll", updateActiveByScroll, { passive: true });
+  window.addEventListener("hashchange", () => {
+    const hashId = window.location.hash.replace("#", "");
+    if (hashId) setActiveLink(hashId);
+  });
+
+  updateActiveByScroll();
+}
+
 const contactForm = document.getElementById("contact-form");
 const contactStatus = document.getElementById("contact-status");
 
