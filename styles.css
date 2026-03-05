@@ -29,6 +29,62 @@ body {
   line-height: 1.6;
 }
 
+.home-page {
+  position: relative;
+}
+
+.home-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.32;
+  --sz: 15px;
+  --c0: #dce7f5;
+  --c1: #8bbbe7;
+  --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
+  --dot: var(--c1) 0 calc(var(--sz) * 0.78),
+    #fff0 calc(calc(var(--sz) * 0.78) + 1px) 100%;
+  --dot2: radial-gradient(circle at 90% 0%, var(--dot)) var(--ts),
+    radial-gradient(circle at 65% 0%, var(--dot)) var(--ts),
+    radial-gradient(circle at 40% 0%, var(--dot)) var(--ts),
+    radial-gradient(circle at 15% 0%, var(--dot)) var(--ts);
+  --cg1: conic-gradient(from -90deg at 5% 51%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg2: conic-gradient(from -90deg at 25% 50%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg3: conic-gradient(from -90deg at 30% 38.5%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg4: conic-gradient(from -90deg at 50% 37.5%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg5: conic-gradient(from -90deg at 55% 26%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg6: conic-gradient(from -90deg at 75% 25%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg7: conic-gradient(from -90deg at 80% 13.5%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+  --cg8: conic-gradient(from -90deg at 100% 12.5%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+  background:
+    var(--dot2), var(--dot2),
+    radial-gradient(circle at 90% 100%, var(--dot)) var(--ts),
+    radial-gradient(circle at 65% 100%, var(--dot)) var(--ts),
+    radial-gradient(circle at 40% 100%, var(--dot)) var(--ts),
+    radial-gradient(circle at 15% 100%, var(--dot)) var(--ts),
+    radial-gradient(circle at 90% 12.5%, var(--dot)) var(--ts),
+    radial-gradient(circle at 65% 25%, var(--dot)) var(--ts),
+    radial-gradient(circle at 40% 37.5%, var(--dot)) var(--ts),
+    radial-gradient(circle at 15% 50%, var(--dot)) var(--ts), var(--cg1),
+    var(--cg1), var(--cg2), var(--cg2), var(--cg3), var(--cg3), var(--cg4),
+    var(--cg4), var(--cg5), var(--cg5), var(--cg6), var(--cg6), var(--cg7),
+    var(--cg7), var(--cg8), var(--cg8),
+    linear-gradient(-45deg, #fff0 0 32.25%, #8bbbe733 50%, #dce7f5 77.5%) var(--ts),
+    linear-gradient(-45deg, #fff0 0 32.25%, #dce7f5 60%) var(--ts),
+    repeating-linear-gradient(90deg, var(--c0) 0 5%, var(--c1) 0 25%) var(--ts);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+}
+
+.home-page > * {
+  position: relative;
+  z-index: 1;
+}
+
 img {
   max-width: 100%;
   display: block;
