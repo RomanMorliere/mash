@@ -25,18 +25,3 @@ if (revealItems.length > 0 && "IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
-
-const hasEventDetail = document.querySelector(".event-detail-layout");
-const canUseCursor =
-  hasEventDetail && window.matchMedia("(pointer:fine)").matches;
-
-if (canUseCursor) {
-  const cursor = document.createElement("div");
-  cursor.className = "custom-cursor";
-  document.body.appendChild(cursor);
-
-  window.addEventListener("mousemove", (event) => {
-    cursor.style.left = `${event.clientX}px`;
-    cursor.style.top = `${event.clientY}px`;
-  });
-}
