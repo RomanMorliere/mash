@@ -1,5 +1,6 @@
 const TEST_SOUNDCLOUD_URL = "https://soundcloud.com/viggo-bryden?ref=clipboard&p=i&c=1&si=760B21F6A0A94696BBE6B240527E0184&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing";
 const DEFAULT_PROFILE_IMAGE = "assets/viggo_test_file.jpeg";
+const GIRLS_SS_URL = "https://on.soundcloud.com/m6VB7oHf8fV4pe88yP";
 
 const PROFILE_IMAGES = {
   "defne": "assets/defne_profilepic.jpeg",
@@ -14,6 +15,33 @@ const PROFILE_IMAGES = {
 const SET_IMAGES = {
   "defne": ["assets/defne_setgellery.jpeg"]
 };
+
+const SOUNDCLOUD_LINKS = {
+  "isthisanna": "https://on.soundcloud.com/ekWgbtz463F55VBdu9",
+  "taju": "https://on.soundcloud.com/cltnENsznVIlCtpbXA",
+  "jaya-latina": "https://on.soundcloud.com/yAHoD8dczSwce0tj1C",
+  "mm9": "https://on.soundcloud.com/ORjp1M2NBEw2i5f4f9",
+  "merrie": "https://on.soundcloud.com/W5navffwl2F4MzVjx5",
+  "emssoleil": "https://on.soundcloud.com/NNJtzrSet2GbpuvZTT",
+  "nalee": "https://on.soundcloud.com/uLdwABR6chp4rfGCsb",
+  "lolo": "https://on.soundcloud.com/NvPxj0sYjgUXlJEXh9",
+  "dayz": "https://on.soundcloud.com/ajfRo4s3qVzWHSgWvd",
+  "zena-rae": "https://on.soundcloud.com/KQUIJXWv5cZpNUBqqB",
+  "kirakira": "https://on.soundcloud.com/SkP6Gb2NUs4pQxV2Qa",
+  "defne": "https://on.soundcloud.com/sqRDUoGm0ElTEGxKo0"
+};
+
+const GIRLS_SS_DJS = new Set([
+  "zena-rae",
+  "defne",
+  "emssoleil",
+  "kirakira",
+  "nalee",
+  "lolo",
+  "dayz",
+  "jaya-latina",
+  "isthisanna"
+]);
 
 const DJ_DATA = {
   "anto": { name: "Anto", tagline: "MASH Launch Party artist.", events: ["MASH Launch Party"] },
@@ -32,7 +60,8 @@ const DJ_DATA = {
 };
 
 Object.entries(DJ_DATA).forEach(([slug, dj]) => {
-  dj.soundcloud = TEST_SOUNDCLOUD_URL;
+  dj.soundcloud = SOUNDCLOUD_LINKS[slug] || TEST_SOUNDCLOUD_URL;
+  dj.extraSoundcloud = GIRLS_SS_DJS.has(slug) ? GIRLS_SS_URL : "";
   dj.profileImage = PROFILE_IMAGES[slug] || DEFAULT_PROFILE_IMAGE;
   dj.setImages = SET_IMAGES[slug] || [];
 });
@@ -46,6 +75,7 @@ const nameEl = document.getElementById("dj-name");
 const taglineEl = document.getElementById("dj-tagline");
 const profileImageEl = document.getElementById("dj-profile-image");
 const soundcloudEl = document.getElementById("dj-soundcloud");
+const extraSoundcloudEl = document.getElementById("dj-soundcloud-extra");
 const eventsEl = document.getElementById("dj-events");
 const galleryEl = document.getElementById("dj-set-gallery");
 
@@ -56,6 +86,14 @@ if (profileImageEl) {
   profileImageEl.alt = `${dj.name} profile picture`;
 }
 if (soundcloudEl) soundcloudEl.href = dj.soundcloud;
+if (extraSoundcloudEl) {
+  if (dj.extraSoundcloud) {
+    extraSoundcloudEl.href = dj.extraSoundcloud;
+    extraSoundcloudEl.hidden = false;
+  } else {
+    extraSoundcloudEl.hidden = true;
+  }
+}
 
 if (eventsEl) {
   eventsEl.innerHTML = "";
