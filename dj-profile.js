@@ -29,6 +29,13 @@ const SOUNDCLOUD_LINKS = {
   "defne": "https://on.soundcloud.com/sqRDUoGm0ElTEGxKo0"
 };
 
+const EVENT_LINKS = {
+  "MASH Launch Party": "events/mash-launch-party.html",
+  "MASH at 160K": "events/mash-at-160k.html",
+  "MASH at 160K (b3b)": "events/mash-at-160k.html",
+  "MASH Boss Ladies": "events/mash-boss-ladies.html"
+};
+
 const DJ_DATA = {
   "anto": { name: "Anto", tagline: "MASH Launch Party artist.", events: ["MASH Launch Party"] },
   "nalee": { name: "Nalee", tagline: "MASH Launch Party artist.", events: ["MASH Launch Party"] },
@@ -171,7 +178,15 @@ if (eventsEl) {
   eventsEl.innerHTML = "";
   dj.events.forEach((event) => {
     const li = document.createElement("li");
-    li.textContent = event;
+    const href = EVENT_LINKS[event];
+    if (href) {
+      const link = document.createElement("a");
+      link.href = href;
+      link.textContent = event;
+      li.appendChild(link);
+    } else {
+      li.textContent = event;
+    }
     eventsEl.appendChild(li);
   });
 }
