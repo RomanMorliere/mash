@@ -1,5 +1,4 @@
 const DEFAULT_PROFILE_IMAGE = "assets/viggo_test_file.jpeg";
-const GIRLS_SS_URL = "https://on.soundcloud.com/m6VB7oHf8fV4pe88yP";
 
 const PROFILE_IMAGES = {
   "defne": "assets/defne_profilepic.jpeg",
@@ -30,12 +29,6 @@ const SOUNDCLOUD_LINKS = {
   "defne": "https://on.soundcloud.com/sqRDUoGm0ElTEGxKo0"
 };
 
-const GIRLS_SS_DJS = new Set([
-  "jaya-latina",
-  "mm9",
-  "merrie"
-]);
-
 const DJ_DATA = {
   "anto": { name: "Anto", tagline: "MASH Launch Party artist.", events: ["MASH Launch Party"] },
   "nalee": { name: "Nalee", tagline: "MASH Launch Party artist.", events: ["MASH Launch Party"] },
@@ -54,7 +47,6 @@ const DJ_DATA = {
 
 Object.entries(DJ_DATA).forEach(([slug, dj]) => {
   dj.soundcloud = SOUNDCLOUD_LINKS[slug] || "";
-  dj.extraSoundcloud = GIRLS_SS_DJS.has(slug) ? GIRLS_SS_URL : "";
   dj.profileImage = PROFILE_IMAGES[slug] || DEFAULT_PROFILE_IMAGE;
   dj.setImages = SET_IMAGES[slug] || [];
 });
@@ -68,7 +60,6 @@ const nameEl = document.getElementById("dj-name");
 const taglineEl = document.getElementById("dj-tagline");
 const profileImageEl = document.getElementById("dj-profile-image");
 const soundcloudEl = document.getElementById("dj-soundcloud");
-const extraSoundcloudEl = document.getElementById("dj-soundcloud-extra");
 const eventsEl = document.getElementById("dj-events");
 const galleryEl = document.getElementById("dj-set-gallery");
 
@@ -91,14 +82,6 @@ if (soundcloudEl) {
     soundcloudEl.setAttribute("aria-disabled", "true");
     soundcloudEl.style.pointerEvents = "none";
     soundcloudEl.style.opacity = "0.65";
-  }
-}
-if (extraSoundcloudEl) {
-  if (dj.extraSoundcloud) {
-    extraSoundcloudEl.href = dj.extraSoundcloud;
-    extraSoundcloudEl.hidden = false;
-  } else {
-    extraSoundcloudEl.hidden = true;
   }
 }
 
