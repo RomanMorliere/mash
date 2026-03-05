@@ -55,70 +55,70 @@ const TRANSLATIONS = {
     "A late-night curation bridging local selectors and invited guests.": "Une curation nocturne reliant les selectors locaux et les invites.",
     "Pop-up launch format combining underground sound and independent fashion labels.": "Format pop-up de lancement melangeant sonorites underground et labels de mode independants."
   },
-  de: {
-    "Who We Are": "Wer wir sind",
-    "Why Work With MASH": "Warum mit MASH arbeiten",
-    "Coming Soon": "Demnachst",
-    "All Events": "Alle Events",
-    "Media": "Medien",
-    "Contact": "Kontakt",
-    "Meet The DJs": "DJs kennenlernen",
+  nl: {
+    "Who We Are": "Wie wij zijn",
+    "Why Work With MASH": "Waarom samenwerken met MASH",
+    "Coming Soon": "Binnenkort",
+    "All Events": "Alle events",
+    "Media": "Media",
+    "Contact": "Contact",
+    "Meet The DJs": "Ontmoet de DJs",
     "Menu": "Menu",
-    "We mash underground culture across cities.": "Wir verbinden Underground-Kultur zwischen den Stadten.",
-    "MASH is a collective at the intersection of music, fashion, and art. Our mission is to become a gateway between Paris and Rotterdam by creating hybrid events, moving artists across borders, and translating one city's energy into another.": "MASH ist ein Kollektiv an der Schnittstelle von Musik, Mode und Kunst. Unsere Mission ist es, eine Verbindung zwischen Paris und Rotterdam zu sein und hybride Events zu kuratieren.",
-    "Book MASH": "MASH buchen",
-    "We are a Paris-Rotterdam based collective building experiences where scenes collide. From vernissages with multiple concepts under one roof to curated lineups that travel between cities, MASH designs cultural bridges.": "Wir sind ein Kollektiv zwischen Paris und Rotterdam und schaffen Erlebnisse, in denen Szenen aufeinandertreffen.",
-    "Music": "Musik",
+    "We mash underground culture across cities.": "Wij mixen underground cultuur tussen steden.",
+    "MASH is a collective at the intersection of music, fashion, and art. Our mission is to become a gateway between Paris and Rotterdam by creating hybrid events, moving artists across borders, and translating one city's energy into another.": "MASH is een collectief op het snijvlak van muziek, mode en kunst. Onze missie is een brug te zijn tussen Parijs en Rotterdam door hybride events te maken en artiesten tussen steden te verbinden.",
+    "Book MASH": "Boek MASH",
+    "We are a Paris-Rotterdam based collective building experiences where scenes collide. From vernissages with multiple concepts under one roof to curated lineups that travel between cities, MASH designs cultural bridges.": "Wij zijn een Parijs-Rotterdam collectief dat ervaringen bouwt waar scenes samenkomen. Van vernissages met meerdere concepten tot gecureerde line-ups tussen steden: MASH bouwt culturele bruggen.",
+    "Music": "Muziek",
     "Fashion": "Mode",
-    "DJ curation, sonic identities, and club-ready programming.": "DJ-Kuration, Sound-Identitaten und clubtaugliche Programme.",
-    "Styling, performance looks, and collective visual direction.": "Styling, Performance-Looks und visuelle Kollektivrichtung.",
-    "Installations, vernissage concepts, and city storytelling.": "Installationen, Vernissage-Konzepte und Stadt-Storytelling.",
-    "Cross-city Access": "Stadteubergreifender Zugang",
-    "Concept Design": "Konzeptdesign",
-    "Venue Fit": "Venue-Fit",
-    "We activate trusted networks in both Paris and Rotterdam scenes.": "Wir aktivieren vertrauensvolle Netzwerke in Paris und Rotterdam.",
-    "Every event is built as a mashup: formats, artists, audiences, and aesthetics.": "Jedes Event ist als Mashup aufgebaut: Formate, Artists, Publikum und Asthetik.",
-    "We adapt lineups and programming to your space while keeping underground credibility.": "Wir passen Lineups und Programm an euren Space an und behalten Underground-Glaubwurdigkeit.",
-    "Upcoming events and next drops.": "Kommende Events und nachste Drops.",
-    "Upcoming": "Demnachst",
+    "DJ curation, sonic identities, and club-ready programming.": "DJ-curatie, sonische identiteiten en clubgerichte programmering.",
+    "Styling, performance looks, and collective visual direction.": "Styling, performance-looks en collectieve visuele richting.",
+    "Installations, vernissage concepts, and city storytelling.": "Installaties, vernissageconcepten en stadsverhalen.",
+    "Cross-city Access": "Toegang tussen steden",
+    "Concept Design": "Conceptontwikkeling",
+    "Venue Fit": "Venue-fit",
+    "We activate trusted networks in both Paris and Rotterdam scenes.": "We activeren vertrouwde netwerken in zowel Parijs als Rotterdam.",
+    "Every event is built as a mashup: formats, artists, audiences, and aesthetics.": "Elk event is een mashup van formats, artiesten, publiek en esthetiek.",
+    "We adapt lineups and programming to your space while keeping underground credibility.": "We passen line-ups en programmering aan op jullie venue met behoud van underground geloofwaardigheid.",
+    "Upcoming events and next drops.": "Aankomende events en volgende drops.",
+    "Upcoming": "Binnenkort",
     "Event Details": "Eventdetails",
-    "Browse the full MASH event archive and upcoming updates.": "Entdecke das komplette MASH-Eventarchiv und kommende Updates.",
-    "Past Event": "Vergangenes Event",
-    "Open Full Events Page": "Komplette Eventseite offnen",
-    "Follow MASH and listen to selected DJ sets.": "Folge MASH und hore ausgewahlte DJ-Sets.",
-    "Our Instagram": "Unser Instagram",
-    "Contact Us": "Kontaktiere uns",
-    "Book us for curation, programming, and cross-city cultural events.": "Buche uns fur Kuration, Programmierung und kulturubergreifende Events.",
-    "MASH Collective • Paris x Rotterdam": "MASH Kollektiv • Paris x Rotterdam",
-    "MASH Program": "MASH Programm",
-    "Past activations and upcoming concepts between Paris and Rotterdam.": "Vergangene Aktivierungen und kommende Konzepte zwischen Paris und Rotterdam.",
-    "Upcoming events and announcements.": "Kommende Events und Ankundigungen.",
-    "Past Events": "Vergangene Events",
-    "Archive of MASH productions.": "Archiv der MASH-Produktionen.",
-    "Back to Home": "Zuruck zur Startseite",
-    "Artists Network": "Artist-Netzwerk",
-    "Meet The DJs We've Worked With": "DJs, mit denen wir gearbeitet haben",
-    "Roster based on MASH event flyers in Rotterdam and cross-city programming.": "Roster basierend auf MASH-Flyern in Rotterdam und stadteubergreifender Programmierung.",
-    "MASH at 160K (b3b set)": "MASH bei 160K (b3b Set)",
-    "MASH Event Detail": "MASH Eventdetail",
-    "Date & Time": "Datum & Uhrzeit",
+    "Browse the full MASH event archive and upcoming updates.": "Bekijk het volledige MASH eventarchief en aankomende updates.",
+    "Past Event": "Afgelopen event",
+    "Open Full Events Page": "Open volledige eventpagina",
+    "Follow MASH and listen to selected DJ sets.": "Volg MASH en luister naar geselecteerde DJ-sets.",
+    "Our Instagram": "Onze Instagram",
+    "Contact Us": "Neem contact op",
+    "Book us for curation, programming, and cross-city cultural events.": "Boek ons voor curatie, programmering en culturele events tussen steden.",
+    "MASH Collective • Paris x Rotterdam": "MASH Collectief • Parijs x Rotterdam",
+    "MASH Program": "MASH Programma",
+    "Past activations and upcoming concepts between Paris and Rotterdam.": "Eerdere activaties en aankomende concepten tussen Parijs en Rotterdam.",
+    "Upcoming events and announcements.": "Aankomende events en aankondigingen.",
+    "Past Events": "Afgelopen events",
+    "Archive of MASH productions.": "Archief van MASH-producties.",
+    "Back to Home": "Terug naar home",
+    "Artists Network": "Artiesten netwerk",
+    "Meet The DJs We've Worked With": "Ontmoet de DJs met wie we hebben gewerkt",
+    "Roster based on MASH event flyers in Rotterdam and cross-city programming.": "Line-up op basis van MASH-flyers in Rotterdam en cross-city programmering.",
+    "MASH at 160K (b3b set)": "MASH bij 160K (b3b set)",
+    "MASH Event Detail": "MASH eventdetail",
+    "Date & Time": "Datum & Tijd",
     "Venue": "Venue",
-    "Sounds By": "Sound von",
+    "Sounds By": "Sounds door",
     "Lineup": "Line-up",
-    "Clothes From": "Mode von",
-    "A dedicated lineup celebrating femme-forward energy in Rotterdam nightlife.": "Ein dediziertes Line-up, das femme-forward Energie im Rotterdamer Nachtleben feiert.",
-    "A late-night curation bridging local selectors and invited guests.": "Eine Spatnacht-Kuration, die lokale Selectors und geladene Gaste verbindet.",
-    "Pop-up launch format combining underground sound and independent fashion labels.": "Pop-up-Launchformat mit Underground-Sound und unabhangigen Fashion-Labels."
+    "Clothes From": "Kleding van",
+    "A dedicated lineup celebrating femme-forward energy in Rotterdam nightlife.": "Een dedicated line-up die femme-forward energie in het Rotterdamse nachtleven viert.",
+    "A late-night curation bridging local selectors and invited guests.": "Een laatnachtcuratie die lokale selectors en gastartiesten verbindt.",
+    "Pop-up launch format combining underground sound and independent fashion labels.": "Pop-up launchformat met underground sound en onafhankelijke modelabels."
   }
 };
 
 const TITLE_TRANSLATIONS = {
-  "MASH": { fr: "MASH", de: "MASH" },
-  "MASH | All Events": { fr: "MASH | Tous les evenements", de: "MASH | Alle Events" },
-  "MASH | DJs": { fr: "MASH | DJs", de: "MASH | DJs" },
-  "MASH | Launch Party": { fr: "MASH | Soiree de lancement", de: "MASH | Launch Party" },
-  "MASH | At 160K": { fr: "MASH | Chez 160K", de: "MASH | Bei 160K" },
-  "MASH | Boss Ladies": { fr: "MASH | Boss Ladies", de: "MASH | Boss Ladies" }
+  "MASH": { fr: "MASH", nl: "MASH" },
+  "MASH | All Events": { fr: "MASH | Tous les evenements", nl: "MASH | Alle events" },
+  "MASH | DJs": { fr: "MASH | DJs", nl: "MASH | DJs" },
+  "MASH | Launch Party": { fr: "MASH | Soiree de lancement", nl: "MASH | Launch Party" },
+  "MASH | At 160K": { fr: "MASH | Chez 160K", nl: "MASH | Bij 160K" },
+  "MASH | Boss Ladies": { fr: "MASH | Boss Ladies", nl: "MASH | Boss Ladies" }
 };
 
 const LANGUAGE_KEY = "mash_lang";
@@ -153,7 +153,7 @@ function translateNodeText(lang) {
 }
 
 function applyLanguage(lang) {
-  const nextLang = ["en", "fr", "de"].includes(lang) ? lang : FALLBACK_LANG;
+  const nextLang = ["en", "fr", "nl"].includes(lang) ? lang : FALLBACK_LANG;
   document.documentElement.lang = nextLang;
   localStorage.setItem(LANGUAGE_KEY, nextLang);
 
@@ -170,7 +170,7 @@ function applyLanguage(lang) {
 captureTextNodes();
 
 const savedLang = localStorage.getItem(LANGUAGE_KEY);
-applyLanguage(["en", "fr", "de"].includes(savedLang) ? savedLang : FALLBACK_LANG);
+applyLanguage(savedLang === "de" ? "nl" : ["en", "fr", "nl"].includes(savedLang) ? savedLang : FALLBACK_LANG);
 
 document.querySelectorAll(".lang-switch button").forEach((button) => {
   button.addEventListener("click", () => {

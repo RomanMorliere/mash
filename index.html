@@ -29,7 +29,7 @@
     <div class="lang-switch" aria-label="Language switch">
       <button type="button" data-lang="en">EN</button>
       <button type="button" data-lang="fr">FR</button>
-      <button type="button" data-lang="de">DE</button>
+      <button type="button" data-lang="nl">NL</button>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">Menu</button>
   </header>
@@ -159,6 +159,14 @@
         <a href="mailto:info@mashcollective.eu">info@mashcollective.eu</a>
         <a href="https://www.instagram.com/mash.intl/" target="_blank" rel="noopener">@mash.intl</a>
       </div>
+      <form id="contact-form" class="contact-form">
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" name="email" type="email" required>
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="contact-status" class="contact-status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASH | DJ Profile</title>
+  <meta name="description" content="DJ profile, SoundCloud, and MASH event history.">
+  <link rel="icon" type="image/svg+xml" href="assets/mash_logo.svg">
+  <link rel="shortcut icon" href="assets/mash_logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="MASH Home">
+      <img src="assets/mash_logo.svg" alt="MASH logo">
+    </a>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html#about">Who We Are</a>
+      <a href="index.html#all-events">All Events</a>
+      <a href="all-events.html">All Events</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="djs.html" class="nav-cta">Meet The DJs</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language switch">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="nl">NL</button>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">Menu</button>
+  </header>
+
+  <main>
+    <section class="hero small-hero">
+      <p class="eyebrow">DJ Profile</p>
+      <h1 id="dj-name">Artist</h1>
+      <p class="hero-text" id="dj-tagline">MASH artist profile.</p>
+      <a href="djs.html" class="btn btn-ghost">Back to DJs</a>
+    </section>
+
+    <section class="panel dj-profile-layout">
+      <article class="dj-profile-card">
+        <img id="dj-profile-image" src="" alt="DJ profile image">
+        <div class="dj-meta">
+          <p class="detail-label">SoundCloud</p>
+          <a id="dj-soundcloud" class="btn btn-small" href="#" target="_blank" rel="noopener">Open SoundCloud</a>
+        </div>
+      </article>
+
+      <article class="dj-profile-card">
+        <p class="detail-label">Events with MASH</p>
+        <ul class="stack-list" id="dj-events"></ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>Set Gallery</h2>
+        <p>Moments during DJ sets.</p>
+      </div>
+      <div class="dj-sets-grid" id="dj-set-gallery"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="djs.html">Back to DJs</a></p>
+  </footer>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script src="dj-profile.js"></script>
+</body>
+</html>
