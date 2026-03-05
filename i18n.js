@@ -1,4 +1,5 @@
 const TRANSLATIONS = {
+  en: {},
   fr: {
     "Who We Are": "Qui sommes-nous",
     "Why Work With MASH": "Pourquoi travailler avec MASH",
@@ -121,7 +122,7 @@ const TITLE_TRANSLATIONS = {
 };
 
 const LANGUAGE_KEY = "mash_lang";
-const FALLBACK_LANG = "fr";
+const FALLBACK_LANG = "en";
 const originalTitle = document.title;
 const textNodes = [];
 
@@ -152,7 +153,7 @@ function translateNodeText(lang) {
 }
 
 function applyLanguage(lang) {
-  const nextLang = lang === "de" ? "de" : "fr";
+  const nextLang = ["en", "fr", "de"].includes(lang) ? lang : FALLBACK_LANG;
   document.documentElement.lang = nextLang;
   localStorage.setItem(LANGUAGE_KEY, nextLang);
 
@@ -169,7 +170,7 @@ function applyLanguage(lang) {
 captureTextNodes();
 
 const savedLang = localStorage.getItem(LANGUAGE_KEY);
-applyLanguage(savedLang === "de" ? "de" : FALLBACK_LANG);
+applyLanguage(["en", "fr", "de"].includes(savedLang) ? savedLang : FALLBACK_LANG);
 
 document.querySelectorAll(".lang-switch button").forEach((button) => {
   button.addEventListener("click", () => {
