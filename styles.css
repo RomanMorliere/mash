@@ -241,6 +241,33 @@ h2 {
   box-shadow: var(--shadow);
 }
 
+.dj-card-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.dj-card-profile img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(145, 191, 232, 0.34);
+  margin-bottom: 0.9rem;
+}
+
+.dj-card-profile h3 {
+  margin: 0 0 0.35rem;
+}
+
+.dj-card-profile p {
+  margin: 0 0 0.9rem;
+}
+
+.dj-card-profile .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 .value-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
