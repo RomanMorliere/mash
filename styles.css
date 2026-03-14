@@ -244,6 +244,7 @@ h2 {
 .dj-card-profile {
   display: flex;
   flex-direction: column;
+  min-width: 260px;
 }
 
 .dj-card-profile img {
@@ -266,6 +267,44 @@ h2 {
 .dj-card-profile .btn {
   margin-top: auto;
   align-self: flex-start;
+}
+
+.dj-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.dj-carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dj-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.dj-carousel-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(145, 191, 232, 0.45);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.3rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.dj-carousel-arrow:hover {
+  background: rgba(110, 174, 222, 0.18);
 }
 
 .value-grid {
@@ -756,7 +795,6 @@ h2 {
   .all-events-list,
   .value-grid,
   .card-grid,
-  .dj-grid,
   .dj-sets-grid,
   .gallery {
     grid-template-columns: 1fr 1fr;
@@ -805,10 +843,17 @@ h2 {
   .all-events-list,
   .value-grid,
   .card-grid,
-  .dj-grid,
   .dj-sets-grid,
   .gallery {
     grid-template-columns: 1fr;
+  }
+
+  .dj-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .dj-carousel-arrow {
+    display: none;
   }
 
   .event-detail-layout {

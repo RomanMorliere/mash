@@ -103,3 +103,19 @@ if (revealItems.length > 0 && "IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
+
+const djCarouselTrack = document.getElementById("dj-carousel-track");
+const djPrev = document.getElementById("dj-prev");
+const djNext = document.getElementById("dj-next");
+
+if (djCarouselTrack && djPrev && djNext) {
+  const scrollAmount = () => Math.min(djCarouselTrack.clientWidth * 0.9, 900);
+
+  djPrev.addEventListener("click", () => {
+    djCarouselTrack.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+  });
+
+  djNext.addEventListener("click", () => {
+    djCarouselTrack.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+  });
+}
