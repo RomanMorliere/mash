@@ -5,6 +5,7 @@ const PROFILE_IMAGES = {
   "emssoleil": "assets/emssoleil_profilepic.JPG",
   "isthisanna": "assets/thisisanna_profilepic.jpeg",
   "jaya-latina": "assets/Jaya-Latina_profilepic.JPG",
+  "kirakira": "assets/kirakira_profilpic.JPEG",
   "merrie": "assets/MERRIE_profilepic.jpg",
   "mm9": "assets/MM9_profilepic.jpg",
   "taju": "assets/tomtaju_profilepic.JPG"
